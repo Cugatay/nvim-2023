@@ -1,0 +1,5 @@
+require("default.set")
+require("default.commands")
+require("default.keybindings")
+-- vim.cmd("so packer.lua")
+-- vim.cmd("BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart")
