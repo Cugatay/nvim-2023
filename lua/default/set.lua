@@ -12,8 +12,6 @@ vim.opt.incsearch = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
-
 vim.cmd("colorscheme tokyonight")
 
 vim.cmd("autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart")
