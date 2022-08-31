@@ -4,9 +4,12 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- For buffers at the top
+  -- use 'vim-airline/vim-airline'
+  -- use 'vim-airline/vim-airline-themes'
   use 'ap/vim-buftabline'
   -- Theme
   use 'folke/tokyonight.nvim'
+  use 'morhetz/gruvbox'
   -- Icons
   use 'ryanoasis/vim-devicons'
 

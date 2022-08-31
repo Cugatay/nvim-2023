@@ -10,8 +10,39 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
+edit lua/default/keybindings.lua
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 31 + 79) / 158)
+exe 'vert 2resize ' . ((&columns * 126 + 79) / 158)
 argglobal
 enew
+file NERD_tree_1
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+wincmd w
+argglobal
+balt coc-settings.json
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -20,12 +51,30 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 8 - ((7 * winheight(0) + 23) / 46)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 8
+normal! 08|
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 31 + 79) / 158)
+exe 'vert 2resize ' . ((&columns * 126 + 79) / 158)
 tabnext 1
+badd +1 coc-settings.json
+badd +1 .gitignore
+badd +1 init.lua
+badd +7 lua/default/keybindings.lua
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20 shortmess=filnxtToOF
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
