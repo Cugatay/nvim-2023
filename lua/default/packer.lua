@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
   use 'ap/vim-buftabline'
   -- Theme
   use 'folke/tokyonight.nvim'
+  -- Icons
   use 'ryanoasis/vim-devicons'
 
   -- Searching Files

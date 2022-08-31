@@ -6,6 +6,9 @@ vim.cmd("noremap <C-l> <cmd>wincmd l<CR>")
 vim.cmd("noremap <tab> <cmd>bn<CR>")
 vim.cmd("noremap <S-tab> <cmd>bp<CR>")
 
+-- To delete words with alt + backspace
+vim.cmd("imap <A-BS> <C-W>")
+
 -- NERDTree shortcuts
 vim.cmd("noremap <C-b> <cmd>NERDTreeToggle<CR>")
--- vim.cmd("inoremap <C-w> <cmd>")
+
