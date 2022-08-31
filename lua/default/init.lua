@@ -1,3 +1,4 @@
+require("default.globals")
 require("default.set")
 require("default.commands")
 require("default.keybindings")

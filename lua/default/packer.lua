@@ -18,6 +18,13 @@ return require('packer').startup(function(use)
   use { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end }
   use 'preservim/nerdtree'
 
+  -- Git
+  use {'lewis6991/gitsigns.nvim',
+  config = function()
+    require('gitsigns').setup()
+  end
+  }
+
   -- Javascript development
   -- use 'pangloss/vim-javascript'
   -- use 'leafgarland/typescript-vim'

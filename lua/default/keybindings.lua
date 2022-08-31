@@ -1,11 +1,4 @@
 -- if <cmd>grep -n -P "\t" NERD_tree_1<CR>
-vim.cmd([[
-function CloseBuffer()
-  NERDTreeClose
-  bd
-endfunction
-]])
-
 -- To delete words with alt + backspace
 vim.cmd("imap <A-BS> <C-W>")
 
