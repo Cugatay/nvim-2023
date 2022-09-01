@@ -4,15 +4,26 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- For buffers at the top
+  -- use 'vim-airline/vim-airline'
+  -- use 'vim-airline/vim-airline-themes'
   use 'ap/vim-buftabline'
   -- Theme
   use 'folke/tokyonight.nvim'
+  use 'morhetz/gruvbox'
+  -- Icons
   use 'ryanoasis/vim-devicons'
 
   -- Searching Files
   use 'junegunn/fzf.vim'
   use { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end }
   use 'preservim/nerdtree'
+
+  -- Git
+  use {'lewis6991/gitsigns.nvim',
+  config = function()
+    require('gitsigns').setup()
+  end
+  }
 
   -- Javascript development
   -- use 'pangloss/vim-javascript'
