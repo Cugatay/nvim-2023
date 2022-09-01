@@ -3,35 +3,37 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  -- For buffers at the top
-  -- use 'vim-airline/vim-airline'
-  -- use 'vim-airline/vim-airline-themes'
-  use 'ap/vim-buftabline'
-  -- Theme
-  use 'folke/tokyonight.nvim'
-  use 'morhetz/gruvbox'
-  -- Icons
-  use 'ryanoasis/vim-devicons'
+  use 'ap/vim-buftabline'                                                 -- Buffers
+  use 'folke/tokyonight.nvim'                                             -- Theme
+  use 'morhetz/gruvbox'                                                   -- Theme
+  use 'ryanoasis/vim-devicons'                                            -- Icons
 
-  -- Searching Files
-  use 'junegunn/fzf.vim'
+  use 'junegunn/fzf.vim'                                                  -- File Search
   use { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end }
-  use 'preservim/nerdtree'
+  -- use 'jremmen/vim-ripgrep'                                               -- Word Search
+  use 'preservim/nerdtree'                                                -- NERDTree
 
-  -- Git
-  use {'lewis6991/gitsigns.nvim',
+  use {'lewis6991/gitsigns.nvim',                                         -- See git changes
   config = function()
     require('gitsigns').setup()
   end
   }
+  use 'Xuyuanp/nerdtree-git-plugin'                                       -- See changed files on NERDTree
+  use {'akinsho/git-conflict.nvim', tag = "*", config = function()        -- Resolve git conflicts
+  require('git-conflict').setup()
+  end}
+
+  use {'styled-components/vim-styled-components', branch = 'main' }       -- Styled components
+  
+  use { 'neoclide/coc.nvim', branch = 'release' }                         -- IntelliSense
+
+  -- For buffers at the top
+  -- use 'vim-airline/vim-airline'
+  -- use 'vim-airline/vim-airline-themes'
 
   -- Javascript development
   -- use 'pangloss/vim-javascript'
   -- use 'leafgarland/typescript-vim'
   -- use 'peitalin/vim-jsx-typescript'
-  -- use {'styled-components/vim-styled-components', branch = 'main' }
   -- use 'jparise/vim-graphql'
-  
-  -- IntelliSense
-  use { 'neoclide/coc.nvim', branch = 'release' }
 end)

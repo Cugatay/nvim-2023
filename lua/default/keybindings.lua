@@ -13,3 +13,6 @@ vim.cmd("noremap <C-w> <cmd>call CloseBuffer()<CR>")
 
 -- NERDTree Toggle
 vim.cmd("noremap <C-b> <cmd>NERDTreeToggle<CR>")
+
+-- Git Changes in a file
+vim.cmd("noremap <C-a> <cmd>Gitsigns preview_hunk<CR>")
