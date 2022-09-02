@@ -16,6 +16,8 @@ return require('packer').startup(function(use)
   use 'sainnhe/sonokai'
   use 'sainnhe/edge'
 
+  use 'lilydjwg/colorizer'
+
   use 'ryanoasis/vim-devicons'                                            -- Icons
 
   use 'junegunn/fzf.vim'                                                  -- F l    e r h

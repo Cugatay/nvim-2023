@@ -40,3 +40,4 @@ vim.cmd("colorscheme nord")
 
 vim.cmd("autocmd BufEnter * :syntax sync fromstart")
 vim.cmd("autocmd BufLeave * :syntax sync clear")
+
