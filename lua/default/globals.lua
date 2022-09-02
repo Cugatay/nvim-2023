@@ -8,13 +8,6 @@ endfunction
 ]])
 
 vim.cmd([[
-function CloseBuffer()
-  NERDTreeClose
-  bd
-endfunction
-]])
-
-vim.cmd([[
 function SaveSession()
   ! mkdir -p ~/.vim-sessions`pwd`
   mks! ~/.vim-sessions`pwd`/session.vim

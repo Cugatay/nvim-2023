@@ -3,9 +3,19 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- For buffers and downline
+  -- use 'vim-airline/vim-airline'
+  -- use 'vim-airline/vim-airline-themes'
   use 'ap/vim-buftabline'                                                 -- Buffers
-  use 'folke/tokyonight.nvim'                                             -- Theme
-  use 'morhetz/gruvbox'                                                   -- Theme
+  use 'qpkorr/vim-bufkill'
+
+  use 'mg979/vim-visual-multi'                                            -- Multi cursor
+
+  use 'arcticicestudio/nord-vim'                                          -- Theme
+  use 'joshdick/onedark.vim'
+  use 'sainnhe/sonokai'
+  use 'sainnhe/edge'
+
   use 'ryanoasis/vim-devicons'                                            -- Icons
 
   use 'junegunn/fzf.vim'                                                  -- F l    e r h
@@ -19,17 +29,13 @@ return require('packer').startup(function(use)
     require('gitsigns').setup()
   end
   }
-  -- use 'airblade/vim-gitgutter'
   use 'tpope/vim-fugitive'                                                -- See git workflows
   use 'Xuyuanp/nerdtree-git-plugin'                                       -- See changed files on NERDTree
+  -- use 'airblade/vim-gitgutter'
 
   use {'styled-components/vim-styled-components', branch = 'main' }       -- Styled components
   
   use { 'neoclide/coc.nvim', branch = 'release' }                         -- IntelliSense
-
-  -- For buffers at the top
-  -- use 'vim-airline/vim-airline'
-  -- use 'vim-airline/vim-airline-themes'
 
   -- Javascript development
   -- use 'pangloss/vim-javascript'
