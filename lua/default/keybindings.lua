@@ -5,6 +5,8 @@ vim.cmd("imap <A-BS> <C-W>")
 -- Window transitions
 vim.cmd("noremap <C-h> <cmd>wincmd h<CR>")
 vim.cmd("noremap <C-l> <cmd>wincmd l<CR>")
+vim.cmd("noremap <C-j> <cmd>wincmd j<CR>")
+vim.cmd("noremap <C-k> <cmd>wincmd k<CR>")
 
 -- Buffer
 vim.cmd("noremap <tab> <cmd>bn<CR>")
@@ -14,5 +16,11 @@ vim.cmd("noremap <C-w> <cmd>call CloseBuffer()<CR>")
 -- NERDTree Toggle
 vim.cmd("noremap <C-b> <cmd>NERDTreeToggle<CR>")
 
--- Git Changes in a file
-vim.cmd("noremap <C-a> <cmd>Gitsigns preview_hunk<CR>")
+-- Git Changes
+vim.cmd("noremap <C-c> <cmd>Gitsigns preview_hunk<CR>")  -- Little
+vim.cmd("noremap <C-a> <cmd>Gdiffsplit<CR>")             -- Whole split
+
+-- Fuzzy Finder
+vim.cmd("noremap <C-o> <cmd>Files<CR>")
+vim.cmd("noremap <C-g> <cmd>GitFiles<CR>")
+vim.cmd("noremap <C-f> <cmd>Ag<CR>")

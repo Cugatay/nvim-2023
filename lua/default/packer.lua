@@ -8,20 +8,20 @@ return require('packer').startup(function(use)
   use 'morhetz/gruvbox'                                                   -- Theme
   use 'ryanoasis/vim-devicons'                                            -- Icons
 
-  use 'junegunn/fzf.vim'                                                  -- File Search
-  use { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end }
-  -- use 'jremmen/vim-ripgrep'                                               -- Word Search
+  use 'junegunn/fzf.vim'                                                  -- F l    e r h
+  use { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end }   --  i e  S a c
+  use 'yuki-yano/fzf-preview.vim'                                         -- Preview for file search
+
   use 'preservim/nerdtree'                                                -- NERDTree
 
-  use {'lewis6991/gitsigns.nvim',                                         -- See git changes
+  use {'lewis6991/gitsigns.nvim',                                         -- See git changes on left to the file
   config = function()
     require('gitsigns').setup()
   end
   }
+  -- use 'airblade/vim-gitgutter'
+  use 'tpope/vim-fugitive'                                                -- See git workflows
   use 'Xuyuanp/nerdtree-git-plugin'                                       -- See changed files on NERDTree
-  use {'akinsho/git-conflict.nvim', tag = "*", config = function()        -- Resolve git conflicts
-  require('git-conflict').setup()
-  end}
 
   use {'styled-components/vim-styled-components', branch = 'main' }       -- Styled components
   
