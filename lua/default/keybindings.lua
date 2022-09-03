@@ -24,6 +24,6 @@ vim.cmd("noremap <C-c> <cmd>Gitsigns preview_hunk<CR>")  -- Little
 vim.cmd("noremap <C-x> <cmd>Gdiffsplit<CR>")             -- Whole split
 
 -- Fuzzy Finder
-vim.cmd("noremap <C-m> <cmd>Files<CR>")
+vim.cmd("noremap <C-p> <cmd>Files<CR>")
 vim.cmd("noremap <C-g> <cmd>GitFiles<CR>")
 vim.cmd("noremap <C-f> <cmd>Ag<CR>")
