@@ -11,10 +11,11 @@ return require('packer').startup(function(use)
 
   use 'mg979/vim-visual-multi'                                            -- Multi cursor
 
-  use 'arcticicestudio/nord-vim'                                          -- Theme
-  use 'joshdick/onedark.vim'
-  use 'sainnhe/sonokai'
-  use 'sainnhe/edge'
+  use 'joshdick/onedark.vim'                                              -- Theme
+
+  use 'lilydjwg/colorizer'                                                -- Color Highlight
+
+  -- use 'leafOfTree/vim-matchtag'
 
   use 'ryanoasis/vim-devicons'                                            -- Icons
 
@@ -31,7 +32,7 @@ return require('packer').startup(function(use)
   }
   use 'tpope/vim-fugitive'                                                -- See git workflows
   use 'Xuyuanp/nerdtree-git-plugin'                                       -- See changed files on NERDTree
-  -- use 'airblade/vim-gitgutter'
+  use 'APZelos/blamer.nvim'                                               -- See the editor of the line
 
   use {'styled-components/vim-styled-components', branch = 'main' }       -- Styled components
   
