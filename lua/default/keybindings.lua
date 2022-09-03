@@ -17,9 +17,11 @@ vim.cmd("noremap <C-w> <cmd>BD<CR>")
 -- NERDTree Toggle
 vim.cmd("noremap <C-b> <cmd>NERDTreeToggle<CR>")
 
+vim.cmd("noremap <C-t> <cmd>Buffers<CR>")
+
 -- Git Changes
 vim.cmd("noremap <C-c> <cmd>Gitsigns preview_hunk<CR>")  -- Little
-vim.cmd("noremap <C-a> <cmd>Gdiffsplit<CR>")             -- Whole split
+vim.cmd("noremap <C-x> <cmd>Gdiffsplit<CR>")             -- Whole split
 
 -- Fuzzy Finder
 vim.cmd("noremap <C-m> <cmd>Files<CR>")

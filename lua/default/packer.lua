@@ -4,9 +4,9 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- For buffers and downline
-  -- use 'vim-airline/vim-airline'
-  -- use 'vim-airline/vim-airline-themes'
-  use 'ap/vim-buftabline'                                                 -- Buffers
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
+  -- use 'ap/vim-buftabline'                                                 -- Buffers
   use 'qpkorr/vim-bufkill'
 
   use 'mg979/vim-visual-multi'                                            -- Multi cursor
@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
 
   use 'lilydjwg/colorizer'                                                -- Color Highlight
 
+  -- use 'Valloric/MatchTagAlways'
   -- use 'leafOfTree/vim-matchtag'
 
   use 'ryanoasis/vim-devicons'                                            -- Icons
