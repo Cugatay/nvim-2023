@@ -35,13 +35,13 @@ return require('packer').startup(function(use)
   use 'Xuyuanp/nerdtree-git-plugin'                                       -- See changed files on NERDTree
   use 'APZelos/blamer.nvim'                                               -- See the editor of the line
 
-  use {'styled-components/vim-styled-components', branch = 'main' }       -- Styled components
-  
   use { 'neoclide/coc.nvim', branch = 'release' }                         -- IntelliSense
 
   -- Javascript development
-  -- use 'pangloss/vim-javascript'
-  -- use 'leafgarland/typescript-vim'
-  -- use 'peitalin/vim-jsx-typescript'
-  -- use 'jparise/vim-graphql'
+  use 'pangloss/vim-javascript'
+  use 'leafgarland/typescript-vim'
+  use 'peitalin/vim-jsx-typescript'
+  use 'jparise/vim-graphql'
+  use {'styled-components/vim-styled-components', branch = 'main' }       -- Styled components
+  
 end)
