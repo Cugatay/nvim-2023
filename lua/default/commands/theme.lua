@@ -13,8 +13,8 @@ if (empty($TMUX))
 endif
 ]])
 
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme tokyonight")
 
 vim.cmd("let g:airline#extensions#tabline#enabled = 1")
 vim.cmd("let g:airline#extensions#tabline#formatter = 'unique_tail'")
--- vim.cmd("let g:airline_theme='atomic'")
+vim.cmd("let g:airline_theme='atomic'")

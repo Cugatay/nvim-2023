@@ -10,13 +10,14 @@ return require('packer').startup(function(use)
   use 'qpkorr/vim-bufkill'
 
   use 'mg979/vim-visual-multi'                                            -- Multi cursor
-
-  use 'joshdick/onedark.vim'                                              -- Theme
+  
+  use 'sheerun/vim-polyglot'                                              -- Better code colors
+  use 'folke/tokyonight.nvim'
 
   use 'lilydjwg/colorizer'                                                -- Color Highlight
 
   -- use 'Valloric/MatchTagAlways'
-  -- use 'leafOfTree/vim-matchtag'
+  use 'leafOfTree/vim-matchtag'
 
   use 'ryanoasis/vim-devicons'                                            -- Icons
 
