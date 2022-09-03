@@ -15,8 +15,6 @@ endif
 
 vim.cmd("colorscheme onedark")
 
--- vim.cmd("let g:airline#extensions#tabline#enabled = 1")
+vim.cmd("let g:airline#extensions#tabline#enabled = 1")
+vim.cmd("let g:airline#extensions#tabline#formatter = 'unique_tail'")
 -- vim.cmd("let g:airline_theme='atomic'")
-
---vim.cmd("autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart")
--- vim.cmd("autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear")
