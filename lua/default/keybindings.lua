@@ -13,11 +13,21 @@ vim.cmd("noremap <tab> <cmd>bn<CR>")
 vim.cmd("noremap <S-tab> <cmd>bp<CR>")
 vim.cmd("noremap <C-w> <cmd>BD<CR>")
 
-
 -- NERDTree Toggle
 vim.cmd("noremap <C-b> <cmd>NERDTreeToggle<CR>")
 
+-- See all buffers
 vim.cmd("noremap <C-t> <cmd>Buffers<CR>")
+
+-- Line up and down
+vim.cmd([[
+nnoremap <S-j> :m .+1<CR>==
+nnoremap <S-k> :m .-2<CR>==
+inoremap <S-j> <Esc>:m .+1<CR>==gi
+inoremap <S-k> <Esc>:m .-2<CR>==gi
+vnoremap <S-j> :m '>+1<CR>gv=gv
+vnoremap <S-k> :m '<-2<CR>gv=gv
+]])
 
 -- Git Changes
 vim.cmd("noremap <C-c> <cmd>Gitsigns preview_hunk<CR>")  -- Little
