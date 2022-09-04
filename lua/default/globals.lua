@@ -8,7 +8,16 @@ endfunction
 ]])
 
 vim.cmd([[
+function CloseSafely()
+  new
+  winc j
+  quit
+endfunction
+]])
+
+vim.cmd([[
 function SaveSession()
+  call CloseSafely()
   ! mkdir -p ~/.vim-sessions`pwd`
   mks! ~/.vim-sessions`pwd`/session.vim
   quit
