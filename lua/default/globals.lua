@@ -11,7 +11,6 @@ vim.cmd([[
 function CloseSafely()
   new
   winc j
-  quit
 endfunction
 ]])
 
