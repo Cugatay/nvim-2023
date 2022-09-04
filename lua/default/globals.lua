@@ -11,7 +11,9 @@ vim.cmd([[
 function CloseSafely()
   new
   winc j
-  " quit
+  if has('unix')
+    quit
+  endif
 endfunction
 ]])
 
