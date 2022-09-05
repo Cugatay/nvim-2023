@@ -1,6 +1,9 @@
--- if <cmd>grep -n -P "\t" NERD_tree_1<CR>
 -- To delete words with alt + backspace
 vim.cmd("imap <A-BS> <C-W>")
+vim.cmd("cmap <a-bs> <c-w>")
+
+-- Coc go to defined file
+vim.cmd("nnoremap <silent><nowait> <space>d :call CocAction('jumpDefinition')<CR>")
 
 -- Window transitions
 vim.cmd("noremap <C-h> <cmd>wincmd h<CR>")
@@ -23,8 +26,6 @@ vim.cmd("noremap <C-t> <cmd>Buffers<CR>")
 vim.cmd([[
 nnoremap <S-j> :m .+1<CR>==
 nnoremap <S-k> :m .-2<CR>==
-inoremap <S-j> <Esc>:m .+1<CR>==gi
-inoremap <S-k> <Esc>:m .-2<CR>==gi
 vnoremap <S-j> :m '>+1<CR>gv=gv
 vnoremap <S-k> :m '<-2<CR>gv=gv
 ]])
