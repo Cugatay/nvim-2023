@@ -14,3 +14,9 @@ vim.cmd("let NERDTreeShowHidden=1")
 
 -- Find File in NERDTree
 vim.cmd("autocmd BufEnter * if &modifiable && g:NERDTree.IsOpen() | silent! NERDTreeFind % | wincmd l | endif")
+
+--vim.cmd([[
+--" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+--autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+    --\ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+--]])
