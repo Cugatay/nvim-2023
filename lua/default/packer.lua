@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
   -- use 'Valloric/MatchTagAlways'
   use 'leafOfTree/vim-matchtag'
 
+  use 'preservim/nerdcommenter'                                           -- Comment out
+
   use 'ryanoasis/vim-devicons'                                            -- Icons
 
   use 'junegunn/fzf.vim'                                                  -- F l    e r h
