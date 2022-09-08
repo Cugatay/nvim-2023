@@ -7,23 +7,10 @@ return require('packer').startup(function(use)
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use {'akinsho/bufferline.nvim', tag = "v2.*"}
-  -- use 'ap/vim-buftabline'                                                 -- Buffers
   use 'qpkorr/vim-bufkill'
-
   use 'mg979/vim-visual-multi'                                            -- Multi cursor
-  
   use 'sheerun/vim-polyglot'                                              -- Better code colors
   use 'folke/tokyonight.nvim'
-
-  use 'lilydjwg/colorizer'                                                -- Color Highlight
-
-  -- use 'Valloric/MatchTagAlways'
-  use 'leafOfTree/vim-matchtag'
-
-  use 'preservim/nerdcommenter'                                           -- Comment out
-
-  use 'ryanoasis/vim-devicons'                                            -- Icons
-
   use 'junegunn/fzf.vim'                                                  -- F l    e r h
   use { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end }   --  i e  S a c
   use 'yuki-yano/fzf-preview.vim'                                         -- Preview for file search
@@ -38,14 +25,18 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'                                                -- See git workflows
   use 'Xuyuanp/nerdtree-git-plugin'                                       -- See changed files on NERDTree
   use 'APZelos/blamer.nvim'                                               -- See the editor of the line
-
   use { 'neoclide/coc.nvim', branch = 'release' }                         -- IntelliSense
+  use 'leafOfTree/vim-matchtag'
+  use 'preservim/nerdcommenter'                                           -- Comment out
+  use 'ryanoasis/vim-devicons'                                            -- Icons
 
-  -- Javascript development
+  ---- use 'Valloric/MatchTagAlways'
+
+
+  ---- Javascript development
   use 'pangloss/vim-javascript'
   use 'leafgarland/typescript-vim'
   use 'peitalin/vim-jsx-typescript'
   use 'jparise/vim-graphql'
   use {'styled-components/vim-styled-components', branch = 'main' }       -- Styled components
-  
 end)
