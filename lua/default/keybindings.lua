@@ -3,7 +3,8 @@ vim.cmd("imap <A-BS> <C-W>")
 vim.cmd("cmap <a-bs> <c-w>")
 
 -- Coc go to defined file
-vim.cmd("nnoremap <silent><nowait> <space>d :call CocAction('jumpDefinition')<CR>")
+vim.cmd("nnoremap <silent><nowait> gd :call CocAction('jumpDefinition')<CR>")
+vim.cmd("nnoremap <silent><nowait> gk :call CocAction('definitionHover')<CR>")
 
 -- Window transitions
 vim.cmd("noremap <C-h> <cmd>wincmd h<CR>")
