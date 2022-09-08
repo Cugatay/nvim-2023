@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
   -- For buffers and downline
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
+  use {'akinsho/bufferline.nvim', tag = "v2.*"}
   -- use 'ap/vim-buftabline'                                                 -- Buffers
   use 'qpkorr/vim-bufkill'
 
