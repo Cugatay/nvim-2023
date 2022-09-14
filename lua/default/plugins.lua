@@ -59,5 +59,7 @@ packer.startup(function(use)
   -- use 'github/copilot.vim'
 
   use 'lewis6991/gitsigns.nvim'
+
   use 'tpope/vim-fugitive' -- It's in VimScript :(
+  -- use {'styled-components/vim-styled-components', branch = 'main' }       -- Styled components
 end)
