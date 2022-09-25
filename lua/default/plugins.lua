@@ -8,7 +8,6 @@ vim.cmd [[packadd packer.nvim]]
 
 -- TODO: Add:
 -- mg979/vim-visual-multi
--- leafOfTree/vim-matchtag
 -- terrortylor/nvim-comment || preservim/nerdcommenter
 -- APZelos/blamer.nvim
 -- Maybe add qpkorr/vim-bufkill
@@ -41,6 +40,7 @@ packer.startup(function(use)
   use "williamboman/mason.nvim"
   use 'williamboman/mason-lspconfig.nvim'
 
+  use 'terrortylor/nvim-comment'
 
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -61,5 +61,6 @@ packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim'
 
   use 'tpope/vim-fugitive' -- It's in VimScript :(
+  use 'leafOfTree/vim-matchtag' -- It's in VimScript :(
   -- use {'styled-components/vim-styled-components', branch = 'main' }       -- Styled components
 end)
