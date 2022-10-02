@@ -5,6 +5,7 @@ saga.init_lsp_saga {
   server_filetype_map = {
     typescript = 'typescript'
   }
+  -- quit = {'q','<ESC>'}
 }
 
 -- TODO: I didn't like lspsaga

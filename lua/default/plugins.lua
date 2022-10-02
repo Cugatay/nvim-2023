@@ -36,7 +36,7 @@ packer.startup(function(use)
   use 'hrsh7th/nvim-cmp' -- Completion
   use 'neovim/nvim-lspconfig' -- LSP
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-  use 'glepnir/lspsaga.nvim' -- LSP UIs
+  -- use 'glepnir/lspsaga.nvim' -- LSP UIs
   use "williamboman/mason.nvim"
   use 'williamboman/mason-lspconfig.nvim'
 
@@ -64,5 +64,7 @@ packer.startup(function(use)
 
   use 'tpope/vim-fugitive' -- It's in VimScript :(
   use 'leafOfTree/vim-matchtag' -- It's in VimScript :(
+  use 'simrat39/rust-tools.nvim'
+
   -- use {'styled-components/vim-styled-components', branch = 'main' }       -- Styled components
 end)

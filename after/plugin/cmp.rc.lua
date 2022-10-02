@@ -1,5 +1,6 @@
 local status, cmp = pcall(require, "cmp")
 if (not status) then return end
+if (not cmp) then return end
 local lspkind = require 'lspkind'
 local luasnip = require('luasnip')
 
