@@ -13,7 +13,6 @@ ts.setup {
   ensure_installed = {
     "tsx",
     "toml",
-    "fish",
     "php",
     "json",
     "yaml",
@@ -21,9 +20,10 @@ ts.setup {
     "css",
     "html",
     "lua",
-
     "prisma",
-    "graphql"
+    "graphql",
+    "sql",
+    "rust"
   },
   autotag = {
     enable = true,

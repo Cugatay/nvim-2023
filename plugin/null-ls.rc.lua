@@ -4,21 +4,22 @@ if (not status) then return end
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 
 local formatting = null_ls.builtins.formatting
-local diagnostics = null_ls.builtins.diagnostics
+-- local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup {
 	debug = false,
 	sources = {
-		formatting.eslint_d,
-    diagnostics.eslint_d.with({
-      diagnostics_format = '[eslint] #{m}\n(#{c})'
-    }),
+		-- formatting.eslint_d,
+    null_ls.builtins.code_actions.xo,
+    -- diagnostics.eslint_d.with({
+    --   diagnostics_format = '[eslint] #{m}\n(#{c})'
+    -- }),
 
 		formatting.prismaFmt, -- Prisma
 		formatting.dprint, -- Rust
     -- formatting.stylelint,
 
-    null_ls.builtins.diagnostics.fish
+    -- null_ls.builtins.diagnostics.fish
     --[[
 		formatting.prettierd.with({
 			filetypes = {

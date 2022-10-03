@@ -15,6 +15,9 @@ keymap.set('n', '<TAB>', '<cmd>bn<CR>')
 keymap.set('n', '<S-TAB>', '<cmd>bp<CR>')
 keymap.set('n', '<C-w>', '<cmd>bd<CR>')
 
+keymap.set('n', '<C-s>', '<cmd>w<CR>')
+keymap.set('i', '<C-s>', '<cmd>w<CR>')
+
 -- Line up and down
 -- keymap.set('n', '<S-j>', ':m .+1<CR>==')
 -- keymap.set('n', '<S-k>', ':m .-2<CR>==')
