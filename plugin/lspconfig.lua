@@ -62,12 +62,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
 )
 
 --------------------------------------------------------- Installations ------------------------------------------------------------------
-nvim_lsp.rust_analyzer.setup {
-  on_attach = on_attach,
-  filetypes = {"rust"},
-  cmd = { "rust-analyzer"},
-  capabilities = capabilities
-}
+nvim_lsp.rust_analyzer.setup {}
 
 nvim_lsp.flow.setup {
   on_attach = on_attach,
