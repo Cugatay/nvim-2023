@@ -31,3 +31,6 @@ keymap.set('n', 'x', '"_x')
 keymap.set('n', '+', '<C-a>')
 keymap.set('n', '=', '<C-a>')
 keymap.set('n', '-', '<C-x>')
+
+-- Trouble
+keymap.set('n', "<C-t>", "<cmd>TroubleToggle<CR>")

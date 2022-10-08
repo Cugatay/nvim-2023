@@ -21,7 +21,7 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  
+
   -- use {
   --   'svrana/neosolarized.nvim',
   --   requires = { 'tjdevries/colorbuddy.nvim' }
@@ -58,7 +58,7 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
 
   use 'akinsho/nvim-bufferline.lua'
-  -- use 'github/copilot.vim'
+  use "folke/trouble.nvim"
 
   use 'lewis6991/gitsigns.nvim'
 
