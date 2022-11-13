@@ -11,5 +11,6 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.ignorecase = true
 vim.opt.termguicolors = true
+vim.opt.mouse = ""
 
 vim.opt.smartindent = true

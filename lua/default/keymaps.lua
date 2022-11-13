@@ -34,3 +34,6 @@ keymap.set('n', '-', '<C-x>')
 
 -- Trouble
 keymap.set('n', "<C-t>", "<cmd>TroubleToggle<CR>")
+
+-- Copy to clipboard
+keymap.set('v', "<C-c>", '"+y')

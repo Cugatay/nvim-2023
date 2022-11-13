@@ -8,6 +8,14 @@ mason.setup({
 })
 
 lspconfig.setup {
-  ensure_installed = { "typescript-language-server", "sumneko_lua", "tailwindcss", "prisma_language_server", "rust_analyzer", "css_lsp", "cssmodules_lsp" },
+  ensure_installed = {
+    -- "typescript-language-server",
+    "sumneko_lua",
+    "tailwindcss",
+    -- "prisma_language_server",
+    "rust_analyzer",
+    -- "css_lsp",
+    -- "cssmodules_lsp"
+  },
 }
 

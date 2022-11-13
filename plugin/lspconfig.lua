@@ -57,12 +57,27 @@ protocol.CompletionItemKind = {
 }
 
 -- Set up completion using nvim_cmp with LSP source
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
+local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
+-- vim.cmd("autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll");
+
+local augroup_format = vim.api.nvim_create_augroup("Format2", { clear = true })
+      vim.api.nvim_clear_autocmds { pattern = {"*.tsx", "*.ts", "*.jsx", "*.js", "*.astro"}, group = augroup_format }
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = {"*.tsx", "*.ts", "*.jsx", "*.js", ".astro"},
+        -- buffer = 0,
+        group = augroup_format,
+        command = "EslintFixAll",
+      })
+
 --------------------------------------------------------- Installations ------------------------------------------------------------------
-nvim_lsp.rust_analyzer.setup {}
+nvim_lsp.eslint.setup{}
+
+nvim_lsp.rust_analyzer.setup {
+  on_attach = on_attach
+}
 
 nvim_lsp.flow.setup {
   on_attach = on_attach,
@@ -71,7 +86,7 @@ nvim_lsp.flow.setup {
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx", "javascript.js" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx", "javascript.js, astro", ".astro" },
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
 }
@@ -98,9 +113,13 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
-nvim_lsp.tailwindcss.setup {}
+nvim_lsp.tailwindcss.setup {
+  on_attach = on_attach
+}
 
-nvim_lsp.prismals.setup {}
+nvim_lsp.prismals.setup {
+  on_attach = on_attach
+}
 
 nvim_lsp.cssls.setup {
   on_attach = on_attach,
@@ -111,6 +130,12 @@ nvim_lsp.cssls.setup {
 nvim_lsp.cssmodules_ls.setup {
   on_attach = on_attach,
 }
+
+nvim_lsp.astro.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(

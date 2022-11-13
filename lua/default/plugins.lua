@@ -66,5 +66,7 @@ packer.startup(function(use)
   use 'leafOfTree/vim-matchtag' -- It's in VimScript :(
   use 'simrat39/rust-tools.nvim'
 
+  use 'wuelnerdotexe/vim-astro'
+
   -- use {'styled-components/vim-styled-components', branch = 'main' }       -- Styled components
 end)

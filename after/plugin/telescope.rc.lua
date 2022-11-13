@@ -17,6 +17,10 @@ telescope.setup {
       n = {
         ["q"] = actions.close
       },
+      i = {
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-k>"] = actions.move_selection_previous,
+      }
     },
   },
   extensions = {
@@ -48,13 +52,16 @@ telescope.load_extension("file_browser")
 
 vim.keymap.set('n', '<C-p>', function()
   builtin.find_files({
+    -- TODO
     no_ignore = false,
+    file_ignore_patterns = { ".git/", "node_modules/" },
     hidden = true
   })
 end)
 
 vim.keymap.set('n', '<C-f>', function()
   builtin.live_grep()
+  -- builtin.grep_string()
 end)
 
 vim.keymap.set("n", "<C-b>", function()
