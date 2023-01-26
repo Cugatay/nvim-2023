@@ -68,5 +68,7 @@ packer.startup(function(use)
 
   use 'wuelnerdotexe/vim-astro'
 
+  -- use 'terryma/vim-multiple-cursors'
+
   -- use {'styled-components/vim-styled-components', branch = 'main' }       -- Styled components
 end)

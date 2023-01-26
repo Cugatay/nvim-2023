@@ -6,3 +6,4 @@ commenter.setup({
   operator_mapping = "<C-/>",
   -- comment_chunk_text_object = "<C-/>"
 })
+
