@@ -1,0 +1,37 @@
+local cmp = require('cmp')
+
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
+local mappings = {
+  ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
+  ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
+
+  ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+
+  ['<C-Space>'] = cmp.mapping.complete()
+}
+
+local lspkind = require('lspkind').cmp_format({
+  mode = 'symbol',
+  maxwidth = 50,
+  ellipsis_char = '...',
+})
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert(mappings),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' }, -- For luasnip users.
+  }, {
+    { name = 'buffer' },
+  }),
+  formatting = {
+    format = lspkind
+  }
+})
