@@ -12,15 +12,15 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  use 'neovim/nvim-lspconfig' -- LSP      THIS
-  use "williamboman/mason.nvim" -- THIS
-  use 'williamboman/mason-lspconfig.nvim' -- THIS
-  use 'hrsh7th/nvim-cmp' -- Completion      THIS
-  use 'hrsh7th/cmp-nvim-lsp' --   THIS    nvim-cmp source for neovim's built-in LSP
-  use "L3MON4D3/LuaSnip" -- THIS
-  use 'onsails/lspkind-nvim' -- vscode-like pictograms     THIS
+  use 'neovim/nvim-lspconfig' -- LSP
+  use "williamboman/mason.nvim"
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'hrsh7th/nvim-cmp' -- Completion
+  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
+  use "L3MON4D3/LuaSnip"
   use 'jose-elias-alvarez/null-ls.nvim'
   -- use 'rafamadriz/friendly-snippets'
+  -- use 'onsails/lspkind-nvim' -- vscode-like pictograms
   -- use 'saadparwaiz1/cmp_luasnip'
 
   -- use {
