@@ -30,12 +30,12 @@ cmp.setup({
       name = 'nvim_lsp',
       -- keyword_length = 3,
       group_index = 1,
-      max_item_count = 30
+      max_item_count = 15
     },
-    { name = 'luasnip' }, -- For luasnip users.
-  }, {
-    { name = 'buffer' },
-  }),
+    -- { name = 'luasnip' }, -- For luasnip users.
+    { name = 'buffer' }
+  }
+  ),
   -- formatting = {
   --   format = lspkind
   -- }

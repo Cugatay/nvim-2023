@@ -18,4 +18,4 @@ vim.opt.smartindent = true
 vim.opt.signcolumn = 'yes'
 
 -- TODO: Test if this works
-vim.opt.pumheight = 15
+-- vim.opt.pumheight = 15
