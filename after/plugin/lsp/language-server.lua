@@ -22,6 +22,22 @@ require('mason-lspconfig').setup_handlers({
   end,
 })
 
+lspconfig.sumneko_lua.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' }
+      }
+    }
+  }
+}
+
+-- lspconfig.eslint.setup({
+--   settings = {
+--     autoFixOnSave = true
+--   }
+-- })
+
 -- lspconfig.tailwindcss.setup({
 --   settings = {
 --     tailwindCSS = {

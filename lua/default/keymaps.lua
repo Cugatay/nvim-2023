@@ -31,3 +31,5 @@ keymap.set('n', '-', '<C-x>')
 
 -- Copy to clipboard
 keymap.set('v', "<C-c>", '"+y')
+
+keymap.set('n', "<C-i>", "yiw :%s/<C-R><C-W>/")

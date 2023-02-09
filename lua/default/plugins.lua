@@ -15,6 +15,15 @@ packer.startup(function(use)
   -- Common utilities
   use 'nvim-lua/plenary.nvim'
 
+  -- Editor Style
+  -- use 'folke/tokyonight.nvim' -- Theme
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use 'nvim-lualine/lualine.nvim' -- Statusline
+  use 'akinsho/nvim-bufferline.lua' -- Bufferline
+  use 'kyazdani42/nvim-web-devicons' -- File icons
+  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' }) -- Highlights
+  -- ----------------------------------------------------------
+
   -- Language Server
   use 'neovim/nvim-lspconfig'
   use "williamboman/mason.nvim" -- Language servers
@@ -24,14 +33,6 @@ packer.startup(function(use)
   use "L3MON4D3/LuaSnip" -- Snippet engine requirement
   use 'jose-elias-alvarez/null-ls.nvim' -- Formatter
   use 'hrsh7th/cmp-buffer' -- Buffer course for intellisense
-  -- ----------------------------------------------------------
-
-  -- Editor Style
-  use 'folke/tokyonight.nvim' -- Theme
-  use 'nvim-lualine/lualine.nvim' -- Statusline
-  use 'akinsho/nvim-bufferline.lua' -- Bufferline
-  use 'kyazdani42/nvim-web-devicons' -- File icons
-  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' }) -- Highlights
   -- ----------------------------------------------------------
 
   -- Must be coding features
