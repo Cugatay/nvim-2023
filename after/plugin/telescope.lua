@@ -1,5 +1,6 @@
-local status, telescope = pcall(require, "telescope")
-if (not status) then return end
+-- TODO: Review this
+
+local telescope = require('telescope')
 local actions = require('telescope.actions')
 local builtin = require("telescope.builtin")
 
@@ -8,8 +9,6 @@ local function telescope_buffer_dir()
 end
 
 local fb_actions = require "telescope".extensions.file_browser.actions
-
--- TODO: Set keymaps on keymaps.lua
 
 telescope.setup {
   defaults = {
@@ -54,7 +53,7 @@ vim.keymap.set('n', '<C-p>', function()
   builtin.find_files({
     -- TODO
     no_ignore = false,
-    file_ignore_patterns = { ".git/", "node_modules/" },
+    -- file_ignore_patterns = { ".git/", "node_modules/" },
     hidden = true
   })
 end)
@@ -76,42 +75,3 @@ vim.keymap.set("n", "<C-b>", function()
     layout_config = { height = 40 }
   })
 end)
-
--- vim.keymap.set('n', '<C-b>', function()
---   vim.cmd("Telescope file_browser")
--- end)
-
--- vim.keymap.set('n', ';f',
---   function()
---     builtin.find_files({
---       no_ignore = false,
---       hidden = true
---     })
---   end)
--- vim.keymap.set('n', ';r', function()
---   builtin.live_grep()
--- end)
--- vim.keymap.set('n', '\\\\', function()
---   builtin.buffers()
--- end)
--- vim.keymap.set('n', ';t', function()
---   builtin.help_tags()
--- end)
--- vim.keymap.set('n', ';;', function()
---   builtin.resume()
--- end)
--- vim.keymap.set('n', ';e', function()
---   builtin.diagnostics()
--- end)
--- vim.keymap.set("n", "sf", function()
---   telescope.extensions.file_browser.file_browser({
---     path = "%:p:h",
---     cwd = telescope_buffer_dir(),
---     respect_gitignore = false,
---     hidden = true,
---     grouped = true,
---     previewer = false,
---     initial_mode = "normal",
---     layout_config = { height = 40 }
---   })
--- end)

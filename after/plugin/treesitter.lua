@@ -1,5 +1,4 @@
-local status, ts = pcall(require, "nvim-treesitter.configs")
-if (not status) then return end
+local ts = require('nvim-treesitter.configs')
 
 ts.setup {
   ensure_installed = { "lua", "vim", "help", "javascript", "typescript", "rust", "go", "markdown" },
@@ -10,6 +9,9 @@ ts.setup {
 
   highlight = {
     enable = true,
+    disable = function(lang, bufnr) -- Disable in large C++ buffers
+      return vim.api.nvim_buf_line_count(bufnr) > 50000
+    end,
 
     additional_vim_regex_highlighting = false,
   },

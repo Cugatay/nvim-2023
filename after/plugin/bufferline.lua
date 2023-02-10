@@ -1,9 +1,7 @@
-local status, bufferline = pcall(require, "bufferline")
-if (not status) then return end
+local bufferline = require('bufferline')
 
-require("bufferline").setup({
+bufferline.setup({
   options = {
-    --separator_style = 'slant',
     --separator_style = "slant" | "thick" | "thin" | { 'any', 'any' },
     separator_style = 'thin',
     show_buffer_close_icons = false,
@@ -35,9 +33,7 @@ require("bufferline").setup({
   },
 })
 
--- TODO: Move this to keymaps
 vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
 vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
-
 -- vim.keymap.set('n', '<A-Tab>', '<Cmd>BufferLineMovePrev<CR>', {})
 -- vim.keymap.set('n', '<A-]>', '<Cmd>BufferLineMovePrev<CR>', {})

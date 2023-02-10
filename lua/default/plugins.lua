@@ -55,7 +55,7 @@ packer.startup(function(use)
 
   -- Language Plugins
   use 'wuelnerdotexe/vim-astro'
-  use 'simrat39/rust-tools.nvim'
+  -- use 'simrat39/rust-tools.nvim'
   -- ---------------------------------------------------------
 
 end)

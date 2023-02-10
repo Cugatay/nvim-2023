@@ -1,6 +1,6 @@
-local status, colorizer = pcall(require, "colorizer")
-if (not status) then return end
+local colorizer = require('colorizer')
 
 colorizer.setup({
+  -- TODO: Try this
   '*';
 })
