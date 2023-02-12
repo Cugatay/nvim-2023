@@ -16,8 +16,8 @@ packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'
 
   -- Editor Style
-  -- use 'folke/tokyonight.nvim' -- Theme
-  use { "catppuccin/nvim", as = "catppuccin" }
+  use 'folke/tokyonight.nvim' -- Theme
+  -- use { "catppuccin/nvim", as = "catppuccin" }
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'akinsho/nvim-bufferline.lua' -- Bufferline
   use 'kyazdani42/nvim-web-devicons' -- File icons
