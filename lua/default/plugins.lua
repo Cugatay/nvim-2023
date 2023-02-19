@@ -12,8 +12,7 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  -- Common utilities
-  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/plenary.nvim' -- Common utulities
 
   -- Editor Style
   use 'folke/tokyonight.nvim' -- Theme
@@ -39,7 +38,7 @@ packer.startup(function(use)
   use 'windwp/nvim-autopairs' -- Auto pair ' { ( [ etc.
   use 'windwp/nvim-ts-autotag' -- Automatically close ts tags -- TODO
   use 'leafOfTree/vim-matchtag' -- Match and highlight tags (In vimscript)
-  use 'terrortylor/nvim-comment' -- Comment out
+  use 'numToStr/Comment.nvim' -- Toggle Comment out
   use 'norcalli/nvim-colorizer.lua' -- Colorize rgb and hex codes
   -- ---------------------------------------------------------
 
@@ -57,5 +56,21 @@ packer.startup(function(use)
   use 'wuelnerdotexe/vim-astro'
   -- use 'simrat39/rust-tools.nvim'
   -- ---------------------------------------------------------
+
+  use {
+    "numToStr/FTerm.nvim",
+    config = function()
+      require 'FTerm'.setup({
+        cmd        = "lazygit",
+        dimensions = {
+          height = 0.95,
+          width = 0.95,
+        },
+
+      })
+
+      vim.keymap.set('n', '<C-g>', '<CMD>lua require("FTerm").toggle()<CR>')
+    end
+  }
 
 end)

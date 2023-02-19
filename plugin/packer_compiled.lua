@@ -74,6 +74,17 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/cagataykaydir/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
+  ["FTerm.nvim"] = {
+    config = { "\27LJ\2\nÙ\1\0\0\5\0\f\0\0166\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\n\0'\4\v\0B\0\4\1K\0\1\0+<CMD>lua require(\"FTerm\").toggle()<CR>\n<C-g>\6n\bset\vkeymap\bvim\15dimensions\1\0\2\nwidth\4æÌ™³\6æÌ¹ÿ\3\vheight\4æÌ™³\6æÌ¹ÿ\3\1\0\1\bcmd\flazygit\nsetup\nFTerm\frequire\0" },
+    loaded = true,
+    path = "/Users/cagataykaydir/.local/share/nvim/site/pack/packer/start/FTerm.nvim",
+    url = "https://github.com/numToStr/FTerm.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/cagataykaydir/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -133,11 +144,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cagataykaydir/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
-  },
-  ["nvim-comment"] = {
-    loaded = true,
-    path = "/Users/cagataykaydir/.local/share/nvim/site/pack/packer/start/nvim-comment",
-    url = "https://github.com/terrortylor/nvim-comment"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -202,6 +208,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: FTerm.nvim
+time([[Config for FTerm.nvim]], true)
+try_loadstring("\27LJ\2\nÙ\1\0\0\5\0\f\0\0166\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\n\0'\4\v\0B\0\4\1K\0\1\0+<CMD>lua require(\"FTerm\").toggle()<CR>\n<C-g>\6n\bset\vkeymap\bvim\15dimensions\1\0\2\nwidth\4æÌ™³\6æÌ¹ÿ\3\vheight\4æÌ™³\6æÌ¹ÿ\3\1\0\1\bcmd\flazygit\nsetup\nFTerm\frequire\0", "config", "FTerm.nvim")
+time([[Config for FTerm.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

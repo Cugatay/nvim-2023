@@ -14,6 +14,7 @@ vim.opt.termguicolors = true
 vim.opt.mouse = ""
 
 vim.opt.smartindent = true
+-- TODO: This is added new
 vim.opt.cindent = true
 
 vim.opt.signcolumn = 'yes'
@@ -21,4 +22,5 @@ vim.opt.signcolumn = 'yes'
 -- TODO: Test if this works
 vim.opt.pumheight = 15
 
-vim.opt.syntax = "off"
+-- vim.opt.syntax = "off"
+-- vim.cmd([[syntax off]])

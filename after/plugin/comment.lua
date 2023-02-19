@@ -1,7 +1,10 @@
-local commenter = require("nvim_comment")
+local comment = require('Comment');
 
-commenter.setup({
-  -- line_mapping = "<C-/>",
-  operator_mapping = "<C-/>",
-  -- comment_chunk_text_object = "<C-/>"
+comment.setup({
+  toggler = {
+    line = '<C-/>'
+  },
+  opleader = {
+    line = '<C-/>'
+  }
 })

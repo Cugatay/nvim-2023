@@ -22,69 +22,37 @@ require('mason-lspconfig').setup_handlers({
   end,
 })
 
--- lspconfig.sumneko_lua.setup {
---   settings = {
---     Lua = {
---       diagnostics = {
---         globals = { 'vim' }
---       }
---     }
---   }
--- }
-
--- lspconfig.eslint.setup({
---   settings = {
---     autoFixOnSave = true
---   }
--- })
-
 lspconfig.tailwindcss.setup({
-  filetypes = {
-    "aspnetcorerazor", "astro", "astro-markdown", "blade", "django-html", "htmldjango", "edge", "eelixir", "elixir",
-    "ejs", "erb", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "heex", "jade", "leaf", "liquid",
-    "markdown", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss", "sass",
-    "scss", "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescript", "typescriptreact",
-    "vue", "svelte",
-    "rust"
-  },
-
-  init_options = {
-    userLanguages = {
-      rust = "html",
-    },
-  },
+  -- filetypes = {
+  --   "aspnetcorerazor", "astro", "astro-markdown", "blade", "django-html", "htmldjango", "edge", "eelixir", "elixir",
+  --   "ejs", "erb", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "heex", "jade", "leaf", "liquid",
+  --   "markdown", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss", "sass",
+  --   "scss", "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescript", "typescriptreact",
+  --   "vue", "svelte",
+  --   "rust"
+  -- },
+  -- init_options = {
+  --   userLanguages = {
+  --     rust = "html",
+  --   },
+  -- },
 
 })
 
--- lspconfig.tailwindcss.setup({
---   settings = {
---     tailwindCSS = {
---       experimental = {
---         classRegex = {
---           "cva\\(([^)]*)\\)",
---           "[\"'`]([^\"'`]*).*?[\"'`]",
---         },
---       },
---     },
---   },
--- })
+-- Deno
 
-
--- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
---   vim.lsp.diagnostic.on_publish_diagnostics, {
---   underline = true,
---   update_in_insert = false,
---   virtual_text = { spacing = 4, prefix = "●" },
---   severity_sort = true,
+-- lspconfig.denols.setup {
+--   -- on_attach = lsp_attach,
+--   root_dir = lspconfig.util.root_pattern("deno.json"),
+--   -- init_options = {
+--   --   lint = true,
+--   -- },
 -- }
--- )
---
--- vim.diagnostic.config({
---   virtual_text = {
---     prefix = '●'
---   },
---   update_in_insert = true,
---   float = {
---     source = "always", -- Or "if_many"
---   },
--- })
+
+-- lspconfig.tsserver.setup {
+--   on_attach = lsp_attach,
+--   root_dir = lspconfig.util.root_pattern("alkjapackage.json"),
+--   -- init_options = {
+--   --   lint = true,
+--   -- },
+-- }
