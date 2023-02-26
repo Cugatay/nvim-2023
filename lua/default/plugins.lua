@@ -27,7 +27,7 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use "williamboman/mason.nvim" -- Language servers
   use 'williamboman/mason-lspconfig.nvim'
-  use 'yioneko/nvim-cmp' -- This is a fork, but it works better with TailwindCSS. To use Default: use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/nvim-cmp' -- This is the actual version, but it was slow with TailwindCSS. If it's still slow, use this instead: yioneko/nvim-cmp
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
   use "L3MON4D3/LuaSnip" -- Snippet engine requirement
   use 'jose-elias-alvarez/null-ls.nvim' -- Formatter

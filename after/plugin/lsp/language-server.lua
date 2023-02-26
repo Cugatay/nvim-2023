@@ -25,16 +25,21 @@ require('mason-lspconfig').setup_handlers({
 lspconfig.denols.setup {
   root_dir = lspconfig.util.root_pattern("deno.json"),
   single_file_support = false,
-  on_attach = lsp_attach
+  on_attach = lsp_attach,
+  capabilities = lsp_capabilities,
 }
 
 lspconfig.tsserver.setup {
   root_dir = lspconfig.util.root_pattern("package.json"),
   single_file_support = false,
+  on_attach = lsp_attach,
+  capabilities = lsp_capabilities,
 }
 
 lspconfig.tailwindcss.setup({
   root_dir = lspconfig.util.root_pattern("tailwind.config.js"),
+  on_attach = lsp_attach,
+  capabilities = lsp_capabilities,
 })
 
 
