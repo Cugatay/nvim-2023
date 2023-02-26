@@ -2,7 +2,7 @@ require("tokyonight").setup({
   transparent = false
 })
 
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd.colorscheme "tokyonight"
 
 -- require("catppuccin").setup({
 --   flavour = "macchiato", -- latte, frappe, macchiato, mocha

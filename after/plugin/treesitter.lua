@@ -1,7 +1,7 @@
 local ts = require('nvim-treesitter.configs')
 
 ts.setup {
-  ensure_installed = { "lua", "vim", "help", "javascript", "typescript", "rust", "go", "markdown" },
+  ensure_installed = { "lua", "vim", "help", "javascript", "typescript", "rust", "go", "markdown", "markdown_inline" },
 
   sync_install = false,
 

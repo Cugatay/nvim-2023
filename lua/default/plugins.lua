@@ -32,6 +32,8 @@ packer.startup(function(use)
   use "L3MON4D3/LuaSnip" -- Snippet engine requirement
   use 'jose-elias-alvarez/null-ls.nvim' -- Formatter
   use 'hrsh7th/cmp-buffer' -- Buffer course for intellisense
+  use 'j-hui/fidget.nvim' -- LSP Updates UI
+  -- use 'glepnir/lspsaga.nvim'
   -- ----------------------------------------------------------
 
   -- Must be coding features
@@ -57,20 +59,5 @@ packer.startup(function(use)
   -- use 'simrat39/rust-tools.nvim'
   -- ---------------------------------------------------------
 
-  use {
-    "numToStr/FTerm.nvim",
-    config = function()
-      require 'FTerm'.setup({
-        cmd        = "lazygit",
-        dimensions = {
-          height = 0.95,
-          width = 0.95,
-        },
-
-      })
-
-      vim.keymap.set('n', '<C-g>', '<CMD>lua require("FTerm").toggle()<CR>')
-    end
-  }
-
+  use "numToStr/FTerm.nvim"
 end)

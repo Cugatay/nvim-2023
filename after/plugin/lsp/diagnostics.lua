@@ -14,6 +14,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 }
 )
 
+------------------------------------------------------
 -- vim.diagnostic.config({
 --   virtual_text = {
 --     prefix = '●'

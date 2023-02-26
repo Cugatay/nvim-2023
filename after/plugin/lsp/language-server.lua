@@ -22,37 +22,34 @@ require('mason-lspconfig').setup_handlers({
   end,
 })
 
-lspconfig.tailwindcss.setup({
-  -- filetypes = {
-  --   "aspnetcorerazor", "astro", "astro-markdown", "blade", "django-html", "htmldjango", "edge", "eelixir", "elixir",
-  --   "ejs", "erb", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "heex", "jade", "leaf", "liquid",
-  --   "markdown", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss", "sass",
-  --   "scss", "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescript", "typescriptreact",
-  --   "vue", "svelte",
-  --   "rust"
-  -- },
-  -- init_options = {
-  --   userLanguages = {
-  --     rust = "html",
-  --   },
-  -- },
+lspconfig.denols.setup {
+  root_dir = lspconfig.util.root_pattern("deno.json"),
+  single_file_support = false,
+  on_attach = lsp_attach
+}
 
+lspconfig.tsserver.setup {
+  root_dir = lspconfig.util.root_pattern("package.json"),
+  single_file_support = false,
+}
+
+lspconfig.tailwindcss.setup({
+  root_dir = lspconfig.util.root_pattern("tailwind.config.js"),
 })
 
--- Deno
 
--- lspconfig.denols.setup {
---   -- on_attach = lsp_attach,
---   root_dir = lspconfig.util.root_pattern("deno.json"),
---   -- init_options = {
---   --   lint = true,
---   -- },
--- }
-
--- lspconfig.tsserver.setup {
---   on_attach = lsp_attach,
---   root_dir = lspconfig.util.root_pattern("alkjapackage.json"),
---   -- init_options = {
---   --   lint = true,
---   -- },
--- }
+-- lspconfig.tailwindcss.setup({
+-- filetypes = {
+--   "aspnetcorerazor", "astro", "astro-markdown", "blade", "django-html", "htmldjango", "edge", "eelixir", "elixir",
+--   "ejs", "erb", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "heex", "jade", "leaf", "liquid",
+--   "markdown", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss", "sass",
+--   "scss", "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescript", "typescriptreact",
+--   "vue", "svelte",
+--   "rust"
+-- },
+-- init_options = {
+--   userLanguages = {
+--     rust = "html",
+--   },
+-- },
+-- })
