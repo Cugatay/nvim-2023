@@ -26,7 +26,7 @@ cmp.setup({
   sources = cmp.config.sources({
     {
       name = 'nvim_lsp',
-      -- keyword_length = 3,
+      keyword_length = 3,
       group_index = 1,
       -- max_item_count = 15
     },
