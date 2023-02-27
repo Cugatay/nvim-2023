@@ -1,4 +1,5 @@
-local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+local lsp_capabilities = require('coq').lsp_ensure_capabilities
+
 local lsp_attach = function(client, bufnr)
   local opts = { buffer = bufnr, remap = false }
 
@@ -15,32 +16,29 @@ local lspconfig = require('lspconfig')
 
 require('mason-lspconfig').setup_handlers({
   function(server_name)
-    lspconfig[server_name].setup({
+    lspconfig[server_name].setup(lsp_capabilities({
       on_attach = lsp_attach,
-      capabilities = lsp_capabilities,
-    })
+    }))
   end,
 })
 
-lspconfig.denols.setup {
+lspconfig.denols.setup(lsp_capabilities({
   root_dir = lspconfig.util.root_pattern("deno.json"),
   single_file_support = false,
   on_attach = lsp_attach,
-  capabilities = lsp_capabilities,
-}
+}))
 
-lspconfig.tsserver.setup {
+lspconfig.tsserver.setup(lsp_capabilities({
   root_dir = lspconfig.util.root_pattern("package.json"),
   single_file_support = false,
   on_attach = lsp_attach,
-  capabilities = lsp_capabilities,
-}
+}))
 
-lspconfig.tailwindcss.setup({
+lspconfig.tailwindcss.setup(lsp_capabilities({
   root_dir = lspconfig.util.root_pattern("tailwind.config.js"),
+  capabilities = lsp_capabilities(),
   on_attach = lsp_attach,
-  capabilities = lsp_capabilities,
-})
+}))
 
 
 -- lspconfig.tailwindcss.setup({
