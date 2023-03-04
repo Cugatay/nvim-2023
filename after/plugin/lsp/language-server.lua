@@ -37,7 +37,7 @@ lspconfig.tsserver.setup {
 }
 
 lspconfig.tailwindcss.setup({
-  root_dir = lspconfig.util.root_pattern("tailwind.config.js"),
+  root_dir = lspconfig.util.root_pattern("tailwind.config.{js,cjs}"),
   on_attach = lsp_attach,
   capabilities = lsp_capabilities,
 })
