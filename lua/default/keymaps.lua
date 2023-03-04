@@ -11,9 +11,9 @@ keymap.set('n', '<C-k>', '<cmd>wincmd k<CR>')
 keymap.set('n', '<C-j>', '<cmd>wincmd j<CR>')
 
 -- Buffer
-keymap.set('n', '<TAB>', '<cmd>bn<CR>')
-keymap.set('n', '<S-TAB>', '<cmd>bp<CR>')
-keymap.set('n', '<C-w>', '<cmd>bd<CR>')
+-- keymap.set('n', '<TAB>', '<cmd>bn<CR>')
+-- keymap.set('n', '<S-TAB>', '<cmd>bp<CR>')
+-- keymap.set('n', '<C-w>', '<cmd>bd<CR>')
 
 -- Line up and down
 -- keymap.set('n', '<C-j>', ':m .+1<CR>==')

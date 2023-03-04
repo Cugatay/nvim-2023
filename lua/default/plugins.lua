@@ -27,13 +27,13 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use "williamboman/mason.nvim" -- Language servers
   use 'williamboman/mason-lspconfig.nvim'
-  use 'hrsh7th/nvim-cmp' -- This is the actual version, but it was slow with TailwindCSS. If it's still slow, use this instead: yioneko/nvim-cmp
+  -- use 'hrsh7th/nvim-cmp' -- This is the actual version, but it was slow with TailwindCSS. If it's still slow, use this instead: yioneko/nvim-cmp
+  use 'yioneko/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
   use "L3MON4D3/LuaSnip" -- Snippet engine requirement
   use 'jose-elias-alvarez/null-ls.nvim' -- Formatter
   use 'hrsh7th/cmp-buffer' -- Buffer course for intellisense
   use 'j-hui/fidget.nvim' -- LSP Updates UI
-  -- use 'glepnir/lspsaga.nvim'
   -- ----------------------------------------------------------
 
   -- Must be coding features
@@ -44,20 +44,19 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua' -- Colorize rgb and hex codes
   -- ---------------------------------------------------------
 
-  -- Search files
+  -- Search globally
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   -- ---------------------------------------------------------
 
-  -- Git extensions
+  -- Git plugins
   use 'lewis6991/gitsigns.nvim'
   use 'tpope/vim-fugitive' -- It's in VimScript :(
+  use "numToStr/FTerm.nvim" -- This is a floating term plugin, but I'm using it for opening LazyGit
   -- ---------------------------------------------------------
 
   -- Language Plugins
   use 'wuelnerdotexe/vim-astro'
   -- use 'simrat39/rust-tools.nvim'
   -- ---------------------------------------------------------
-
-  use "numToStr/FTerm.nvim"
 end)
