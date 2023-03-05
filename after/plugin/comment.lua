@@ -2,9 +2,9 @@ local comment = require('Comment');
 
 comment.setup({
   toggler = {
-    line = '<C-/>'
+    line = '<C-c>'
   },
   opleader = {
-    line = '<C-/>'
+    line = '<C-c>'
   }
 })

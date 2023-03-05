@@ -13,6 +13,8 @@ vim.opt.ignorecase = true
 vim.opt.termguicolors = true
 vim.opt.mouse = ""
 
+vim.opt.swapfile = false
+
 vim.opt.smartindent = true
 -- TODO: This is added new
 vim.opt.cindent = true

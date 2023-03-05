@@ -1,11 +1,12 @@
 local cmp = require('cmp')
 
-local cmp_select = { behavior = cmp.SelectBehavior.Select }
+-- local cmp_select = { behavior = cmp.SelectBehavior.Select, select = true }
+local cmp_select = { select = true }
 
 local mappings = {
   ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
   ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
-  ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  ['<CR>'] = cmp.mapping.confirm(cmp_select),
   -- ['<Tab>'] = cmp.mapping.confirm({ select = true }),
   ['<C-Space>'] = cmp.mapping.complete()
 }
