@@ -5,10 +5,10 @@ keymap.set('i', '<A-BS>', '<C-w>')
 keymap.set('c', '<A-BS>', '<C-w>')
 
 -- Window transitions
-keymap.set('n', '<C-h>', '<cmd>wincmd h<CR>')
-keymap.set('n', '<C-l>', '<cmd>wincmd l<CR>')
-keymap.set('n', '<C-k>', '<cmd>wincmd k<CR>')
-keymap.set('n', '<C-j>', '<cmd>wincmd j<CR>')
+keymap.set('n', ' h', '<cmd>wincmd h<CR>')
+keymap.set('n', ' l', '<cmd>wincmd l<CR>')
+keymap.set('n', ' k', '<cmd>wincmd k<CR>')
+keymap.set('n', ' j', '<cmd>wincmd j<CR>')
 
 -- Buffer
 -- keymap.set('n', '<TAB>', '<cmd>bn<CR>')

@@ -7,7 +7,7 @@ local mappings = {
   ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
   ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
   ['<CR>'] = cmp.mapping.confirm(cmp_select),
-  -- ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+  ['<C-f>'] = cmp.mapping.confirm({ select = true }),
   ['<C-Space>'] = cmp.mapping.complete()
 }
 
@@ -27,8 +27,8 @@ cmp.setup({
   sources = cmp.config.sources({
     {
       name = 'nvim_lsp',
-      keyword_length = 3,
-      group_index = 1,
+      -- keyword_length = 3,
+      -- group_index = 1,
       -- max_item_count = 15
     },
     -- { name = 'luasnip' }, -- For luasnip users.
