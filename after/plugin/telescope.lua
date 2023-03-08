@@ -53,7 +53,7 @@ vim.keymap.set('n', '<C-p>', function()
   builtin.find_files({
     -- TODO
     no_ignore = false,
-    -- file_ignore_patterns = { ".git/", "node_modules/" },
+    -- file_ignore_patterns = { "!**/.env" },
     hidden = true
   })
 end)

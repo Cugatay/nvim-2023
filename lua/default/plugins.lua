@@ -59,4 +59,10 @@ packer.startup(function(use)
   use 'wuelnerdotexe/vim-astro'
   -- use 'simrat39/rust-tools.nvim'
   -- ---------------------------------------------------------
+
+  use({
+    "folke/persistence.nvim",
+    event = "BufReadPre", -- this will only start session saving when an actual file was opened
+    module = "persistence",
+  })
 end)
